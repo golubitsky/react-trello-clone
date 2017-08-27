@@ -1,5 +1,5 @@
 [Live link](https://glacial-sea-70583.herokuapp.com/)  
-
+[How to deploy to heroku](https://devcenter.heroku.com/articles/container-registry-and-runtime#pushing-an-image-s)  
 ***
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
