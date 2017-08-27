@@ -1,6 +1,7 @@
 #!/bin/sh
 # wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
-export HEROKU_DEBUG=1  
+export HEROKU_DEBUG=1 
+apt-get install heroku 
 if heroku plugins:install heroku-container-registry; then
     echo "installed heroku-container-registry"
 else
