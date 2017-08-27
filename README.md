@@ -1,5 +1,7 @@
 [Live link](https://glacial-sea-70583.herokuapp.com/)  
 [How to deploy to heroku](https://devcenter.heroku.com/articles/container-registry-and-runtime#pushing-an-image-s)  
+Until CI/CD is resolved:  
+```heroku container:push web```  
 [Dev server](https://github.com/typicode/json-server#install)  
 Start both the app and the dev-server:  
 ```yarn run dev```  
