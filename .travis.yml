@@ -1,5 +1,13 @@
+sudo: required
+
+services:
+  - docker
+
 language: node_js
 node_js:
   - "node"
 
 cache: yarn
+
+after_success:
+  - sh .travis/deploy_dockerhub.sh
