@@ -1,0 +1,11 @@
+{
+  "boards": [
+    { "id": 1, "title": "First board" }
+  ],
+  "lists": [
+    { "id": 1, "title": "First list", "boardId": 1 }
+  ],
+  "cards": [
+    { "id": 1, "title": "First card", "listId": 1 }
+  ]
+}

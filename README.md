@@ -1,5 +1,11 @@
 [Live link](https://glacial-sea-70583.herokuapp.com/)  
 [How to deploy to heroku](https://devcenter.heroku.com/articles/container-registry-and-runtime#pushing-an-image-s)  
+[Dev server](https://github.com/typicode/json-server#install)  
+Start the server:  
+```json-server --watch db.json -p 3001```  
+Example URL:  
+```http://localhost:3001/boards/1/cards```  
+
 ***
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
