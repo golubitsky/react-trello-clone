@@ -1,21 +1,17 @@
 import React, { Component } from 'react';
+import { Switch, Route } from 'react-router';
 import logo from './logo.svg';
 import './App.css';
+import Page404 from './Page404';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Hello CI/CD!</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
-}
+const App = () => <div>Hello world!</div>;
 
-export default App;
+export default () =>
+  (
+    <div className="App">
+      <Switch>
+        <Route exact path="/" component={App} />
+        <Route component={Page404} />
+      </Switch>
+    </div>
+  );
