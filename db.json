@@ -1,9 +1,12 @@
 {
   "boards": [
-    { "id": 1, "title": "First board" }
+    { "id": 1, "title": "First board" },
+    { "id": 2, "title": "Second board" }
   ],
   "lists": [
-    { "id": 1, "title": "First list", "boardId": 1 }
+    { "id": 1, "title": "First list for first board", "boardId": 1 },
+    { "id": 2, "title": "Second list for first board", "boardId": 1 },
+    { "id": 3, "title": "First list for second board", "boardId": 2 }
   ],
   "cards": [
     { "id": 1, "title": "First card", "listId": 1 }
