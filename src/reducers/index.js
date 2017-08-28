@@ -1,4 +1,3 @@
-import { combineReducers } from 'redux';
 import { REQUEST_BOARDS, RECEIVE_BOARDS } from '../actions';
 
 const defaultState = {
