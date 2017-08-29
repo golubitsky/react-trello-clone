@@ -7,6 +7,9 @@ Start both the app and the dev-server:
 ```yarn run dev```  
 Example URL for dev server:  
 ```http://localhost:3001/boards/1/cards```  
+  
+Firebase:
+```https://console.firebase.google.com/project/react-trello-clone/overview```  
 
 ***
 
