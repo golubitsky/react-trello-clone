@@ -15,7 +15,16 @@
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.2.0"
   },
+  "proxy": {
+    "/api/*": {
+      "target": "http://localhost:3001",
+      "pathRewrite": {
+        "/api" : ""
+      }
+    }
+  },
   "scripts": {
+    "prestart": "sh set-env.sh",
     "start": "react-scripts start",
     "dev-server": "json-server --watch db.json -p 3001",
     "dev": "yarn run dev-server & yarn start",

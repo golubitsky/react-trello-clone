@@ -8,11 +8,13 @@ const defaultState = {
 const boards = (state = defaultState, action) => {
   switch (action.type) {
     case REQUEST_BOARDS:
+      console.log('requesting');
       return {
         ...state,
         isFetching: true
       };
     case RECEIVE_BOARDS:
+      console.log(action.boards);
       return {
         ...state,
         isFetching: false,

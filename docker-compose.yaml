@@ -1,0 +1,23 @@
+version: '3'
+services:
+  db:
+    image: postgres
+  api:
+    build:
+      context: ./api
+    command: bundle exec rails s -p 3000 -b '0.0.0.0'
+    volumes:
+      - ./api:/myapp
+    ports:
+      - "3001:3000"
+    depends_on:
+      - db
+  web:
+    build: .
+    command: yarn start
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - "${WEB_APP_PORT}:3000"
+    depends_on:
+      - api

@@ -1,22 +1,14 @@
 FROM node:7.8.0-alpine
-RUN mkdir -p /code
-WORKDIR /code
-ADD . /code
 
-# Override the base log level (info).
-ENV NPM_CONFIG_LOGLEVEL warn
+# Prepare app directory
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app/
 
-# Install and configure `serve`.
-RUN npm install -g serve
-CMD serve -s build
-EXPOSE 5000
+# Install dependencies
+COPY package.json /usr/src/app/
+RUN npm install --silent
 
-# Install all dependencies of the current project.
-COPY package.json package.json
-RUN npm install
+ADD . /usr/src/app/
 
-# Copy all local files into the image.
-COPY . .
-
-# Build for production.
-RUN npm run build --production
+EXPOSE 3000
+CMD [ "npm", "start" ]
